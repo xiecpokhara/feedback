@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .logoClass{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border-top: 5px solid rgb(8, 8, 107);
+            overflow: hidden;
+            padding: 10px;
+            background-color: white;
+        }
+        .informationXIEC{
+            padding: 10px;
+            width: 300px;
+            border-left: 3px solid rgb(8, 8, 107);
+            
+        }
+        .headerTxt{
+            color: rgb(8, 8, 107);
+            font-size: 20px;
+            margin-bottom: -5px;
+        }
+        .headerTxt2{
+            color: rgb(8, 8, 107);
+            font-size: 13px;
+            margin-bottom: 0px;
+        }
+        .secondaryTxt{
+            color: rgb(8, 8, 107);
+            font-size: 10px;
+        }
+        .icons a i{
+            margin-left: 10px;
+            font-size: 20px;
+            color:rgb(8, 8, 107)
+        }
+        .xiec{
+            line-height: 15px;
+            text-align: right;
+        }
+        .xiec span{
+            font-size: 14px;
+        }
+        @media (max-width: 668px){
+            .xiec{
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 470px){
+            .logoClass{
+                height: 70px;
+                width: 70px;
+            }
+            .informationXIEC{
+                padding: 5px;
+                width: 200px;
+
+            }
+            .headerTxt{
+                font-size: 14px;
+                margin-bottom: -1px;
+            }
+            .headerTxt2{
+                font-size: 9px;
+            }
+        }
+        @media (max-width: 330px){
+            .logoClass{
+                height: 55px;
+                width: 55px;
+            }
+            .informationXIEC{
+                padding: 5px;
+                width: 125px;
+
+            }
+            .headerTxt{
+                font-size: 9px;
+                margin-bottom: -1px;
+            }
+            .headerTxt2{
+                font-size: 6px;
+            }
+            .secondaryTxt{
+                font-size: 6px;
+            }
+            .icons a i{
+                font-size: 16px;
+                margin-left: 6px;
+            }
+            .xiec{
+                font-size: 12px;
+            }
+            .xiec span{
+                font-size: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body style="background-color: rgb(2, 2, 49);">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <div class="navbar-brand" href="#">
+            <img src="/xiecFront.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            
+          </div>
+          <div>
+            <h4 class="xiec" style="color: rgb(8, 8, 107)">XAVIER INTERNATIONAL <br> <span>Pokhara Office</span></h4>
+
+          </div>
+          
+        </div>
+    </nav>
+    <div class="container my-3 p-3">
+        
+        <form>
+            <div class="mb-3">
+              <label for="nameInput" class="form-label text-white">Your Name</label>
+              <input type="text" required class="form-control" id="nameInput" aria-describedby="YourName">
+              <label for="email" class="form-label text-white">Your Email</label>
+              <input type="inputEmail" required class="form-control" id="nameEmail" aria-describedby="YourEmail">
+              <div id="emailHelp" class="form-text text-secondary">Feel free to feedback, Your identity will be kept secret.</div>
+            </div>
+            <div class="mb-3">
+              <label for="userFeedback" class="form-label text-white">Your Feedback</label>
+              <textarea required type="text" class="form-control" id="userFeedback" rows="5"></textarea>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
+          </form>
+          
+            
+    </div>
+
+    <div class="p-2" style="background: white;">
+        <div class="d-flex my-2 justify-content-center align-items-center">
+            <div class="logoClass"><img src="/XIEC.png" class="img img-fluid" alt=""></div>
+            <div class="mx-3 informationXIEC">
+                <h5 class="headerTxt">XAVIER INTERNATIONAL</h5>
+                <P class="headerTxt2">EDUCATIONAL CONSULTANCY PVT. LTD.</P>
+                <p class="secondaryTxt">E: marketingpokharaxavier@gmail.com <br> C: +977 980-1360047 <br> A: Shree Krishna Bhawan Top Floor, Uttam Chowk, Pokhara, 33700, Nepal</p>
+                <div class="d-flex icons mx-2">
+                    <a href="mailto:marketingpokharaxavier@gmail.com"><i class='bx bxl-gmail'></i></a>
+                    <a href="https://wa.me/9779801360047?text=I%20want%20to%20know%20more%20about%20this."><i class='bx bxs-message-rounded'></i></a>
+                    <a href="https://www.google.com/maps/place/Xavier+World+Educational+Consultancy+P.Ltd./@28.2058914,83.9964743,17z/data=!3m1!4b1!4m6!3m5!1s0x399595b0c24d5c2b:0xaffe51216b8f83d1!8m2!3d28.2058914!4d83.9964743!16s%2Fg%2F11lbc8496h?entry=tts"><i class='bx bx-current-location'></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063864772986"><i class='bx bxl-facebook-circle' ></i></a>
+                </div>
+            </div>
+      </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
