@@ -106,6 +106,34 @@
     #msg{
         display: none;
     }
+    #spinner{
+        display: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #spinner .loader{
+        height: 60px;
+        width: 60px;
+        border: 10px solid white;
+        border-radius: 50%;
+        border-top: 10px solid rgb(8, 8, 107);
+        border-bottom: 10px solid rgb(8, 8, 107);
+        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin{
+        0%{
+            transform:  scale(1.2) rotate(0deg);
+        }
+        100%{
+            transform: scale(.9) rotate(360deg);
+        }
+    }
     </style>
 
 </head>
@@ -123,14 +151,17 @@
           
         </div>
     </nav>
-    <div class="container my-3 p-3" style="height: 90vh;">
+    <div id="spinner">
+        <div class="loader"></div>
+    </div>
+    <div class="container p-3 rounded-2" style="margin-top:40px ; margin-bottom: 50px;">
         <h3 class="text-center text-white">Feedback Section</h3>
-        <hr style="width: 100%; border-color: white;">
+        <hr style="width: 100%; border-color: rgb(255, 255, 255);">
         <form name="submit-to-google-sheet" id="myForm">
             <div class="mb-3">
               <label for="nameInput" class="form-label text-white">Your Name</label>
               <input type="text" required name="Name" class="form-control mb-2" id="nameInput" aria-describedby="YourName">
-              <label for="email" class="form-label text-white">Your Email</label>
+              <label for="email" class="form-label text-white ">Your Email</label>
               <input type="inputEmail" name="Email" required class="form-control" id="nameEmail" aria-describedby="YourEmail">
               <div id="emailHelp" class="form-text text-secondary">Feel free to feedback, Your identity will be kept secret.</div>
             </div>
@@ -141,7 +172,9 @@
             <div class="d-flex justify-content-center my-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-            <p class="my-2 text-center text-white" id="msg">Thank you for providing your valuable feedback!!</p>
+            <div style="height: 20px;">
+                <p class="my-2 text-center text-white" id="msg">Thank you for providing your valuable feedback!!</p>
+            </div>
             
           </form>
           
@@ -150,7 +183,7 @@
 
     <div class="p-2 mt-3" style="background: white;">
         <div class="d-flex my-2 justify-content-center align-items-center">
-            <div class="logoClass"><img src="./XIEC.png" class="img img-fluid" alt=""></div>
+            <div class="logoClass"><img src="/XIEC.png" class="img img-fluid" alt=""></div>
             <div class="mx-3 informationXIEC">
                 <h5 class="headerTxt">XAVIER INTERNATIONAL</h5>
                 <P class="headerTxt2">EDUCATIONAL CONSULTANCY PVT. LTD.</P>
@@ -172,10 +205,13 @@
       
         form.addEventListener('submit', e => {
           e.preventDefault()
+          document.getElementById('spinner').style.display= 'flex'
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
                 document.getElementById('msg').style.display = 'block'
+                document.getElementById('spinner').style.display= 'none'
                 setTimeout(()=>{
+                    
                     document.getElementById('msg').style.display = 'none'
                     document.getElementById('myForm').reset()
                 },3000)
